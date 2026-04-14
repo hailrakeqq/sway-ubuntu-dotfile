@@ -16,7 +16,6 @@ sudo apt install -y \
   grim \
   slurp \
   wl-clipboard \
-  alacritty \
   fonts-font-awesome \
   fonts-jetbrains-mono
 
@@ -25,8 +24,9 @@ echo "✅ Packages installed"
 # =========================
 #    Install zsh
 # =========================
-chmod +x scripts/install_zsh.zip 
-./scripts/install_zsh.zip
+
+#chmod +x scripts/install_zsh.zip 
+#./scripts/install_zsh.zip
 
 # =========================
 # 📁 Config paths
@@ -56,6 +56,15 @@ mkdir -p ~/.config/wofi
 if [ -d "$DIR/wofi" ]; then
   cp -r "$DIR/wofi/"* ~/.config/wofi/
 fi
+
+# =========================
+# 🪟 Mako config
+# =========================
+mkdir -p ~/.config/mako
+if [ -d "$DIR/mako" ]; then
+  cp -r "$DIR/mako/"* ~/.config/mako/
+fi
+
 
 # =========================
 # 🖥 Alacritty config
